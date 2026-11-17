@@ -25,7 +25,8 @@ while IFS=: read -r pkg_name pkg_ver; do
 
 	# Find the entrypoint from typst.toml
 	toml="$HOME/.cache/typst/packages/preview/$pkg_name/$pkg_ver/typst.toml"
-	entrypoint=$(grep -A5 '^\[template\]' "$toml" | grep 'entrypoint' | head -1 | sed 's/.*= *"\(.*\)"/\1/')
+
+	entrypoint=$(grep -A5 '^\[template\]' "$toml" | grep 'entrypoint' | head -1 | sed -n 's/^[ \t]*entrypoint *= *"\([^"]*\)".*/\1/p')
 
 	if [ -z "$entrypoint" ]; then
 		echo "NO_ENTRY $pkg_name:$pkg_ver"
