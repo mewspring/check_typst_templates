@@ -5,7 +5,7 @@ REPO_DIR=$(pwd)
 TYPST_VERSIONS_DIR="$REPO_DIR/typst_versions"
 
 # Versions sorted from newest to oldest
-VERSIONS=(0.14.2 0.13.1 0.12.0 0.11.1 0.10.0 0.9.0 0.8.0 0.7.0 0.6.0 0.5.0 0.4.0 0.3.0 0.2.0 0.1.0)
+VERSIONS=(0.15.1 0.14.2 0.13.1 0.12.0 0.11.1 0.10.0 0.9.0 0.8.0 0.7.0 0.6.0 0.5.0)
 LATEST="${VERSIONS[0]}"
 PREVIOUS="${VERSIONS[1]}"
 
